@@ -376,7 +376,7 @@ const GraphView = ({
           gap={20}
           color="var(--reactflow-bg-sub-pattern-color)"
         />
-        <Controls />
+        <Controls style={{ margin: "10px" }} />
       </ReactFlow>
 
       {selectedNode && (
@@ -402,15 +402,15 @@ const GraphView = ({
           </button>
         </div>
       )}
-      <div className="absolute bottom-[10px] left-[50px] flex items-center gap-2">
+      <div className="absolute bottom-[10px] left-12 flex items-center gap-2">
         <div className="relative flex items-center">
-          <MdSearch className="absolute left-0 text-neutral-500 pointer-events-none" size={16} />
+          <MdSearch className="absolute left-0 mt-px text-neutral-400 dark:text-neutral-600 pointer-events-none" size={16} />
           <input
             ref={searchInputRef}
             type="text"
             maxLength={30}
             placeholder="Search node"
-            className="w-[180px] outline-none bg-transparent text-[var(--text-color)] border-b-2 border-neutral-500 text-left pl-5 pr-10 transition-colors focus:border-(--node-key-color) placeholder:text-sm placeholder:text-neutral-500 placeholder:opacity-70"
+            className="w-[180px] outline-none bg-transparent text-[var(--text-color)] border-b-2 border-neutral-300 dark:border-neutral-500 text-left pl-5 pr-6 transition-colors focus:border-(--node-key-color) placeholder:text-sm placeholder:text-neutral-500 placeholder:opacity-70"
             value={searchString}
             onChange={handleChange}
           />
@@ -418,7 +418,7 @@ const GraphView = ({
           {!searchString && (
             <div className="absolute right-0 flex items-center gap-1 text-[8px] text-neutral-500 pointer-events-none select-none font-sans">
               <kbd className="px-1 py-[2.5px] border border-neutral-500 rounded font-medium opacity-70">
-                <div className="-translate-x-[1/2px] -translate-y-0.75">
+                <div className="flex translate-y-0.25">
                   ⌘
                 </div>
               </kbd>
