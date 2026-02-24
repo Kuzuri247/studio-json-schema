@@ -130,6 +130,7 @@ const MonacoEditor = () => {
       editorPanelRef.current.collapse();
     } else {
       editorPanelRef.current.expand();
+      editorPanelRef.current.resize(25);
     }
 
     setEditorVisible((prev) => !prev);
